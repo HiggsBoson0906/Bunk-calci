@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calendar</title>
+  </head>
+  <body data-bs-theme="dark"  >
+       <!--Date-->
+    <div class="flex justify-content-lg-end align-items-bottom merriweather-font m-2" style="color:#fbaa07;" id="current-date"></div>
+      <span class="merriweather-font" id="date"></span>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-collapse-s bg-body-secondary merriweather-font"
+      style="min-height: 56px"
+    >
+      <div
+        class="navbar-collapse d-lg-flex collapse show container-fluid justify-content-lg-between"
+        id="navbarsExample11"
+      >
+        <a class="navbar-brand col-lg-3 me-0 playwrite-au-qld-LOGO" href="#"
+          ><img src="assets/phoenix.jpg" height="40px" class="me-2" />BUNK
+          CALCI</a
+        >
+        <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              ><img src="assets/home.svg" height="20px" />Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timetable.html">📃Timetable</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="calendar.html">📅Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="subjects.html">📖Subjects</a>
+          </li>
+        </ul>
+        <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+          <button class="btn-secondary" id="toggle">
+            <img src="assets/moon.svg" />
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!--calendar-->
+    <div id="calendar" ></div>
+
+
+  <!-- TUI Calendar & Dependencies JS -->
+  <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
+  <script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
+  <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
+  <script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.min.js"></script>  
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

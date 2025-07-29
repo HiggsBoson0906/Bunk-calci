@@ -1,0 +1,68 @@
+.merriweather-font {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+#classtoday.hidden {
+  display: none;
+}
+#noclasstoday.hidden {
+  display: none;
+}
+.playwrite-au-qld-LOGO {
+  font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #fbaa07;
+}
+.bitcount-single-bunk {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+.navbarcolor{
+  background-color: #7703fb;
+}
+.active{
+  color: #fbaa07 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#calendar {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 20px;
+  
+  padding-bottom:10px;
+  height: calc(100vh - 56px); /* Adjust height to account for navbar */
+
+}
+.gradient-background {
+  background: linear-gradient(203deg,#a2c020,#274ccc,#f10d75,#3c784b,#1fe4fd);
+  background-size: 240% 240%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

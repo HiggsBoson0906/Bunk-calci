@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Libre+Baskerville:wght@700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Subjects</title>
+  </head>
+  <body data-bs-theme="dark">
+    <!--Date-->
+    <div
+      class="flex justify-content-lg-end merriweather-font m-2"
+      style="color: #fbaa07"
+      id="current-date"
+    ></div>
+    <span class="merriweather-font" id="date"></span>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-collapse-s bg-body-secondary merriweather-font"
+      style="height: 56px"
+    >
+      <div
+        class="navbar-collapse d-lg-flex collapse show container-fluid justify-content-lg-between"
+        id="navbarsExample11"
+      >
+        <a class="navbar-brand col-lg-3 me-0 playwrite-au-qld-LOGO" href="#"
+          ><img src="assets/phoenix.jpg" height="40px" class="me-2" />BUNK
+          CALCI</a
+        >
+        <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              ><img src="assets/home.svg" height="20px" />Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timetable.html">📃Timetable</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">📅Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="subjects.html">📖Subjects</a>
+          </li>
+        </ul>
+        <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+          <button class="btn-secondary" id="toggle">
+            <img src="assets/moon.svg" />
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!--Subjects-->
+    <div class="container-fluid mt-2">
+      <div class="position-relative mb-4" style="min-height: 48px">
+        <h1
+          class="merriweather-font mb-0 text-center position-absolute top-50 start-50 translate-middle mt-1"
+          style="z-index: 2"
+        >
+          Subjects
+        </h1>
+        <button
+          class="btn btn-warning merriweather-font position-absolute top-50 end-0 translate-middle-y mt-2"
+          style="font-size: 1.1rem"
+          data-bs-toggle="modal"
+          data-bs-target="#addsubjectmodal"
+        >
+          <img src="assets/icons8-plus.svg" alt="plus icon" /> Add Subject
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 grid-4 m-2"
+        id="subject-grid"
+      ></div>
+    </div>
+    <!--modal for subject addition-->
+    <div
+      class="modal fade"
+      id="addsubjectmodal"
+      tabindex="-1"
+      role="dialog"
+      data-bs-backdrop="static"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title merriweather-font"
+              id="exampleModalLongTitle"
+            >
+              Add subject
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="add-subject-form">
+            <div class="modal-body">
+              <h4 for="subjectname" class="form-label merriweather-font">
+                Subject name
+              </h4>
+              <p class="text-muted merriweather-font">
+                Enter the name of the subject you want to add.
+              </p>
+              <label for="subjectname" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                id="subjectname"
+                placeholder="Enter subject name"
+                required
+              />
+              <input
+                type="date"
+                class="form-control mt-3"
+                id="startdate"
+                placeholder="Enter start date (DD/MM/YYYY)"
+                required
+              />
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Subject grid -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
