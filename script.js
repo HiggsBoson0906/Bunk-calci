@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     subjects[idx].extraclasses++;
                     break;
                 case 'edit':
+                    alert('Editing feature is not implemented yet.');
                     break;
             }
             saveSubjects(subjects);
