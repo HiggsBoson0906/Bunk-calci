@@ -134,9 +134,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="d-flex justify-content-between align-items-center mb-5">
                     <h5 class="card-title">${sub.name}</h5>
                     <div>
-                    <button class="btn btn-info btn-sm" data-idx="${idx}" data-action="edit"><img src="assets/edit.svg" alt="edit"></button>
                     <button class="btn btn-danger btn-sm" data-idx="${idx}" data-action="delete"><img src="assets/trash.svg" alt="delete"></button>
-                    <button class="btn btn-secondary btn-sm" data-idx="${idx}" data-action="undo"><img src="assets/undo.svg" alt="undo"></button>
+                    <button class="btn btn-info btn-sm" data-idx="${idx}" data-action="undo"><img src="assets/undo.svg" alt="undo"></button>
                     </div>
                 </div>
                 <div class="flex-col mt-5 mb-4">
@@ -211,9 +210,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'twoclass':
                     subjects[idx].extraclasses++;
-                    break;
-                case 'edit':
-                    alert('Editing feature is not implemented yet.');
                     break;
             }
             saveSubjects(subjects);
@@ -432,7 +428,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="d-flex justify-content-between align-items-center mb-5">
                     <h5 class="card-title">${sub.name}</h5>
                     <div>   
-                    <button class="btn btn-secondary btn-sm" data-idx="${idx}" data-action="undo"><img src="assets/undo.svg" alt="undo"></button>
+                    <button class="btn btn-info btn-sm" data-idx="${idx}" data-action="undo"><img src="assets/undo.svg" alt="undo"></button>
                     </div>
                 </div>
                 <div class="flex-col mt-5 mb-4">
