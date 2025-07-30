@@ -1,81 +1,78 @@
-Bunk Calci
-Bunk Calci is a student-friendly web app designed to help keep track of attendance, manage timetables, and organize schedules effectively. It’s lightweight, responsive, and stores your data locally for quick access and persistence across sessions and pages.
+ # Bunk Calci
 
-🌐 Live Demo:
-Visit the running site here:
-Try It Out!
-👉 Open Bunk Calci on GitHub Pages
+**Bunk Calci** is a student-friendly web app designed to help keep track of attendance, manage timetables, and organize schedules effectively. It’s lightweight, responsive, and stores your data locally for quick access and persistence across sessions and pages.
 
-Features
-Attendance Tracker
-Track your attendance per subject with dynamic calculation of total classes based on timetable and start date. Mark classes as attended, missed, or free, and see your attendance percentage.
+## 🚀 Try It Out!
 
-Subjects Management
-Add, edit, and delete subjects easily. Store subject start date and track attendance specifically per subject.
+👉 **Open Bunk Calci on GitHub Pages**:  
+[https://higgsboson0906.github.io/Bunk-calci/](https://higgsboson0906.github.io/Bunk-calci/)
 
-Timetable Calendar
-Maintain a weekly timetable grid (Monday to Sunday) to visualize your subject schedule. Add subjects to specific days using a modal dialog with a checklist.
+## ✨ Features
 
-Interactive Calendar View
-Integrated with the TUI Calendar library to view schedules, tasks, and events in a month or week view with creation popup enabled.
+- **Attendance Tracker**
+  - Track attendance per subject with dynamic calculation based on timetable and start date.
+  - Mark classes as attended, missed, or free, and see your attendance percentage.
+  <img width="1919" height="985" alt="image" src="https://github.com/user-attachments/assets/c753527d-722b-4d1d-9641-923f58d8decb" />
 
-Dark/Light Mode Toggle
-Switch between dark and light themes, with your preference saved in localStorage.
-
-Persistent Local Storage
-All user data (subjects, attendance, timetable, theme preferences) is stored in the browser's localStorage to maintain state across sessions and pages without a backend.
+- **Subjects Management**
+  - Add, edit, and delete subjects easily.
+  - Store subject start date and track attendance for each subject.
+   <img width="1885" height="995" alt="image" src="https://github.com/user-attachments/assets/2d7cf601-213f-4243-a2fd-c103f406274d" />
 
 
-Technologies Used
-HTML5, CSS3, Bootstrap 5
+- **Timetable Calendar**
+  - Maintain a weekly timetable grid (Monday to Sunday) to visualize your subject schedule.
+  - Add subjects to specific days using a modal dialog with a checklist.
 
-Vanilla JavaScript
+- **Interactive Calendar View**
+  - Integrated with the TUI Calendar library to view schedules, tasks, and events in a month or week view.
+  - Supports popup creation for events.
 
-TUI Calendar for rich calendar UI
+- **Dark/Light Mode Toggle**
+  - Switch instantly between dark and light themes.
+  - Theme preference is saved in localStorage.
 
-LocalStorage API for data persistence
+- **Persistent Local Storage**
+  - All user data (subjects, attendance, timetable, theme preferences) is stored in the browser’s localStorage.
+  - Data persists across sessions and pages—no backend needed.
 
-Project Structure
-index.html - Home page with welcome message and navigation
+## 🛠 Technologies Used
 
-subjects.html - Manage subjects and track attendance
+- **HTML5 & CSS3** (with Bootstrap 5 for responsive layout)
+- **Vanilla JavaScript**
+- **TUI Calendar** (for calendar UI)
+- **LocalStorage API** (for data persistence)
 
-timetable.html - View and edit weekly timetable with modal editor
+## 📁 Project Structure
 
-calendar.html - Interactive calendar integrated with TUI Calendar
+```
+index.html         # Home page with welcome message and navigation
+subjects.html      # Manage subjects and track attendance
+timetable.html     # View and edit weekly timetable with modal editor
+calendar.html      # Interactive calendar integrated with TUI Calendar
+assets/            # Images, icons, and static files
+styles.css         # Custom CSS styles
+script.js          # Shared JavaScript (guarded, per-page logic)
+```
 
-assets/ - Contains images, icons, and other static files
+## 🧑💻 Usage
 
-styles.css - Custom CSS styles
+1. **Add your subjects** on the Subjects page (with name and start date).
+2. **Track your attendance** by marking classes as attended, missed, or free; attendance percentage and counts update automatically.
+3. **Define your weekly timetable** on the Timetable page by adding subjects with the modal form; select days per your schedule.
+4. **View your calendar** on the Calendar page with an overview of events and schedules.
+5. **Switch themes** any time using the navbar toggle.
+6. **All data is saved locally** and loads whenever you revisit the site.
 
-script.js - Shared JavaScript handling all pages with guarded execution blocks
+## ⚙️ How It Works
 
-Usage
-Add your subjects on the Subjects page, specifying the name and start date.
+- The `Subject` class represents each subject, with attendance and start date.
+- `getTotalClasses()` dynamically calculates total classes using timetable configuration and elapsed weeks from the start date.
+- The timetable is a JavaScript object (`{Monday: [...], Tuesday: [...], ...}`), saved/loaded via localStorage.
+- All user interactions (add/edit subjects, mark attendance, update timetable) modify localStorage and update the UI live.
+- Theme toggling updates a Bootstrap attribute and stores the choice locally.
 
-Track your attendance by marking classes as attended, missed, or free. The percentage and counts automatically update.
+## 📝 Considerations
 
-Define your weekly timetable on the Timetable page by adding subjects using the modal form, selecting days as per your schedule.
-
-View your calendar on the Calendar page with an overview of events and schedules.
-
-Switch themes anytime using the toggle button available in the navbar.
-
-All data is saved locally and loaded whenever you revisit the site.
-
-How It Works
-The Subject class represents each subject with attendance and start date.
-
-getTotalClasses() dynamically calculates total classes based on weeks elapsed since start date and your weekly timetable data.
-
-Timetable data is represented as a JavaScript object with days as keys and arrays of subjects as values. It is saved/loaded from localStorage.
-
-User interactions (adding subjects, marking attendance, editing timetable) update the localStorage and the UI in real-time.
-
-The theme toggle stores preference locally and modifies the Bootstrap data attribute accordingly.
-
-Considerations
-The app currently uses localStorage, so data is saved per-browser and per-domain — clearing browser data will reset all information.
-
-
- 
+- The app uses localStorage only, so data is saved **per-browser and per-domain**.
+- If the browser’s site data is cleared, all information will be lost.
