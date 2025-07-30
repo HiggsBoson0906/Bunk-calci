@@ -4,8 +4,7 @@
 
 ## 🚀 Try It Out!
 
-👉 **Open Bunk Calci on GitHub Pages**:  
-[https://higgsboson0906.github.io/Bunk-calci/](https://higgsboson0906.github.io/Bunk-calci/)
+👉 [Open Bunk Calci on GitHub Pages](https://higgsboson0906.github.io/Bunk-calci/)
 
 ## ✨ Features
 
