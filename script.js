@@ -210,6 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'twoclass':
                     subjects[idx].extraclasses++;
+                    subjects[idx].attended++;
                     break;
             }
             saveSubjects(subjects);
@@ -477,6 +478,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'twoclass':
                     subjects[idx].extraclasses++;
+                    subjects[idx].attended++;
                     break;
             }
             saveSubjects(subjects);
