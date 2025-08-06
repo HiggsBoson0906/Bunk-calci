@@ -1,5 +1,5 @@
 //date
-var currentDate = new Date(); 
+var currentDate = new Date();
 document.addEventListener('DOMContentLoaded', function () {
     var dateElement = document.querySelector('#current-date');
     if (dateElement) {
@@ -26,13 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) body.setAttribute('data-bs-theme', savedTheme);
-        if (savedTheme === 'dark') {
-            toggleBtn.innerHTML = '<img src="assets/moon.svg" alt="Dark Mode">';
-            toggleBtn.className = 'btn btn-dark';
-        } else {
-            toggleBtn.innerHTML = '<img src="assets/sun.svg" height="30px" alt="Light Mode">';
-            toggleBtn.className = 'btn btn-light';
+        if (savedTheme) {
+            body.setAttribute('data-bs-theme', savedTheme);
+            if (savedTheme === 'dark') {
+                toggleBtn.innerHTML = '<img src="assets/moon.svg" alt="Dark Mode">';
+                toggleBtn.className = 'btn btn-dark';
+            } else {
+                toggleBtn.innerHTML = '<img src="assets/sun.svg" height="30px" alt="Light Mode">';
+                toggleBtn.className = 'btn btn-light';
+            }
         }
     }
 
@@ -210,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'twoclass':
                     subjects[idx].extraclasses++;
+                    subjects[idx].attended++;
                     break;
             }
             saveSubjects(subjects);
@@ -477,6 +480,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     break;
                 case 'twoclass':
                     subjects[idx].extraclasses++;
+                    subjects[idx].attended++;
                     break;
             }
             saveSubjects(subjects);
